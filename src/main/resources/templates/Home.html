@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body style="background-color: lightblue">
+
+<h4 style="color: red">Country List</h4>
+<tr style="color: white" th:each="country: ${countries}">
+    <td style="color: white" th:text="${country}"></td>
+    <td><br/></td>
+</tr>
+<h4 style="color: red">User List</h4>
+<tr th:each="myuser: ${myuserAttribute}">
+    <td  style="color: white" th:text="${myuser.id}"></td>
+    <td  style="color: white" th:text="${myuser.name}"></td>
+    <td th:text="${myuser.email}"></td>
+    <td><br/></td>
+</tr>
+
+
+</body>
+</html>
